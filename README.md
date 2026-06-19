@@ -42,9 +42,22 @@ Depending on the window you focus on, H.I.C.D triggers **System States**:
 
 ## 🚀 Installation
 
-*Warning: This setup assumes you are on Arch Linux with an Intel/AMD system.*
+> [!WARNING]
+> This setup assumes you are on Arch Linux with an Intel/AMD system.
 
-### 1. Prerequisites (Packages)
+### ⚡ One-Click Install (Recommended)
+Just clone the repository, run the script, and let it do everything for you!
+```bash
+git clone https://github.com/dnono2134-a11y/dotfiles.git
+cd dotfiles
+chmod +x install.sh
+./install.sh
+```
+
+### 🛠️ Manual Installation
+If you prefer doing things by hand:
+
+#### 1. Prerequisites (Packages)
 Install the required dependencies using `pacman` and `yay`:
 ```bash
 yay -S hyprland kitty rofi-wayland waybar hyprpanel-git swww cliphist \
