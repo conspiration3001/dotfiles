@@ -1,0 +1,25 @@
+* {
+    background:     #11131a;
+    foreground:     #e1e2eb;
+
+    color0:     #0b0e15;
+    color1:     #adc6ff;
+    color2:     #b1c6f7;
+    color3:     #f4aeff;
+    color4:     #4d8efe;
+    color5:     #344972;
+    color6:     #c66dda;
+    color7:     #c2c6d5;
+    color8:     #8c909f;
+    color9:     #adc6ff;
+    color10:     #b1c6f7;
+    color11:     #f4aeff;
+    color12:     #4d8efe;
+    color13:     #344972;
+    color14:     #c66dda;
+    color15:     #e1e2eb;
+
+    background-color:   @background;
+    border-color:       @color8;
+    spacing:            2;
+}

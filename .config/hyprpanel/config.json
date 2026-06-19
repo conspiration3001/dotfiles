@@ -1,0 +1,14 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.notification.enableShadow": false,
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": true,
+  "menus.clock.weather.location": "paris",
+  "menus.volume.raiseMaximumVolume": true,
+  "menus.power.showLabel": false,
+  "menus.power.lowBatteryNotification": true,
+  "theme.bar.buttons.modules.cpuTemp.enableBorder": true,
+  "theme.bar.buttons.modules.power.enableBorder": true
+}
