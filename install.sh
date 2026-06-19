@@ -1,20 +1,64 @@
 #!/bin/bash
 
-# === THE TROLL ===
+# === THE TROLL (BADASS EDITION) ===
 clear
-echo -e "\033[31m[CRITICAL]\033[0m Traces of Windows detected in memory."
-echo -n "Initiating emergency wipe of all drives "
-for i in {1..4}; do echo -n "."; sleep 0.6; done
-echo ""
-echo -e "Erasing /dev/sda... \033[32m[OK]\033[0m"
+echo -e "\033[32m"
+# Matrix / Hex Dump simulation
+cat /dev/urandom | hexdump -C | grep -v "*" | head -n 80
+echo -e "\033[0m"
 sleep 0.5
-echo -e "Erasing /dev/nvme0n1... \033[32m[OK]\033[0m"
+
+clear
+echo -e "\033[1;31m[!] WARNING: UNAUTHORIZED SYSTEM ACCESS DETECTED\033[0m"
+sleep 0.8
+echo -e "\033[1;31m[!] BYPASSING KERNEL SECURITY...\033[0m"
+sleep 0.8
+echo -e "\033[1;31m[!] INJECTING ANTIGRAVITY ROOTKIT...\033[0m"
+sleep 0.5
+
+echo -ne "\033[1;31mDecrypting Master Password: \033[0m["
+for i in {1..40}; do
+    echo -n "█"
+    sleep 0.04
+done
+echo -e "] \033[1;32mACCESS GRANTED\033[0m"
 sleep 1
-echo -e "\033[32mJust kidding! Welcome to the Antigravity Dotfiles setup.\033[0m"
-echo "Let's make this system awesome. 🚀"
+clear
+
+# Evil Skull ASCII Art
+echo -e "\033[1;31m"
+cat << "EOF"
+    .                                                      .
+        .n                   .                 .                  n.
+  .   .dP                  dP                   9b                 9b.    .
+ 4    qXb         .       dX                     Xb       .        dXp     t
+dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
+9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+ 9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+  `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+    `9XXXXXXXXXXXP' `9XX'   DIE    `98v8P'  HUMAN   `XXP' `9XXXXXXXXXXXP'
+        ~~~~~~~       9X.          .db|db.          .XP       ~~~~~~~
+                        )b.  .dbo.dP'`v'`9b.odb.  .dX(
+                      ,dXXXXXXXXXXXb     dXXXXXXXXXXXb.
+                     dXXXXXXXXXXXP'   .   `9XXXXXXXXXXXb
+                    dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                    9XXb'   `XXXXXb.dX|Xb.dXXXXX'   `dXXP
+                     `'      9XXXXXX(   )XXXXXXP      `'
+                              XXXX X.`v'.X XXXX
+                              XP^X'`b   d'`X^XX
+                              X. 9  `   '  P .X
+                              `b  `       '  d'
+                               `             '
+EOF
+echo -e "\033[0m"
+
+echo -e "\033[1;31mSYSTEM TAKEOVER COMPLETE. ALL YOUR DATA BELONGS TO US.\033[0m"
+sleep 2.5
+echo -e "\n\033[1;32m--> Nah, just kidding! 😎 Welcome to the Antigravity Dotfiles setup.\033[0m"
+echo -e "\033[1;32m--> Let's make this system awesome. 🚀\033[0m"
 sleep 2
-echo ""
-# =================
+clear
+# ==================================
 
 echo "--> Update system & install dependencies"
 sudo pacman -Syu --noconfirm
