@@ -1,63 +1,32 @@
 #!/bin/bash
 
-# === THE TROLL (BADASS EDITION) ===
+# === THE HYPRLAND HOSTAGE TROLL ===
 clear
-echo -e "\033[32m"
-# Matrix / Hex Dump simulation
-cat /dev/urandom | hexdump -C | grep -v "*" | head -n 80
-echo -e "\033[0m"
-sleep 0.5
-
-clear
-echo -e "\033[1;31m[!] WARNING: UNAUTHORIZED SYSTEM ACCESS DETECTED\033[0m"
-sleep 0.8
-echo -e "\033[1;31m[!] BYPASSING KERNEL SECURITY...\033[0m"
-sleep 0.8
-echo -e "\033[1;31m[!] INJECTING ANTIGRAVITY ROOTKIT...\033[0m"
-sleep 0.5
-
-echo -ne "\033[1;31mDecrypting Master Password: \033[0m["
-for i in {1..40}; do
-    echo -n "█"
-    sleep 0.04
-done
-echo -e "] \033[1;32mACCESS GRANTED\033[0m"
+echo -e "\033[1;31m[!] FATAL ERROR: CONFLICTING KERNEL MODULES DETECTED\033[0m"
+echo -e "\033[1;31m[!] ATTEMPTING TO HOT-RELOAD GPU DRIVERS...\033[0m"
 sleep 1
-clear
 
-# Evil Skull ASCII Art
-echo -e "\033[1;31m"
-cat << "EOF"
-    .                                                      .
-        .n                   .                 .                  n.
-  .   .dP                  dP                   9b                 9b.    .
- 4    qXb         .       dX                     Xb       .        dXp     t
-dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
-9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
- 9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
-  `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
-    `9XXXXXXXXXXXP' `9XX'   DIE    `98v8P'  HUMAN   `XXP' `9XXXXXXXXXXXP'
-        ~~~~~~~       9X.          .db|db.          .XP       ~~~~~~~
-                        )b.  .dbo.dP'`v'`9b.odb.  .dX(
-                      ,dXXXXXXXXXXXb     dXXXXXXXXXXXb.
-                     dXXXXXXXXXXXP'   .   `9XXXXXXXXXXXb
-                    dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
-                    9XXb'   `XXXXXb.dX|Xb.dXXXXX'   `dXXP
-                     `'      9XXXXXX(   )XXXXXXP      `'
-                              XXXX X.`v'.X XXXX
-                              XP^X'`b   d'`X^XX
-                              X. 9  `   '  P .X
-                              `b  `       '  d'
-                               `             '
-EOF
-echo -e "\033[0m"
+# Spam scary notifications on the desktop
+for i in {1..5}; do
+    notify-send -u critical -t 4000 "⚠️ GPU MELTDOWN IMMINENT" "VRAM Corruption at memory address 0x00${RANDOM}F. Thermal limits exceeded."
+    sleep 0.2
+done
 
-echo -e "\033[1;31mSYSTEM TAKEOVER COMPLETE. ALL YOUR DATA BELONGS TO US.\033[0m"
+echo -e "\033[1;31m[!] DRIVER RELOAD FAILED. EMERGENCY DISPLAY SHUTDOWN INITIATED.\033[0m"
+sleep 1
+
+# The ultimate heart attack: literally turn off the monitor
+hyprctl dispatch dpms off
 sleep 2.5
-echo -e "\n\033[1;32m--> Nah, just kidding! 😎 Welcome to the Antigravity Dotfiles setup.\033[0m"
-echo -e "\033[1;32m--> Let's make this system awesome. 🚀\033[0m"
-sleep 2
+
+# Turn the monitor back on
+hyprctl dispatch dpms on
+sleep 0.5
+
 clear
+echo -e "\033[1;32m--> Nah, just kidding! Your GPU and screen are perfectly fine. 😎\033[0m"
+echo -e "\033[1;32m--> Welcome to the Antigravity Dotfiles setup. Let's make this system awesome! 🚀\033[0m"
+sleep 2
 # ==================================
 
 echo "--> Update system & install dependencies"
