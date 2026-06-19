@@ -8,6 +8,12 @@ Welcome to the **dnono2134-a11y** dotfiles repository. This isn't just another r
 
 Built around **Hyprland**, this setup prioritizes maximum performance, zero bloat, and an adaptive AI-like contextual daemon written from scratch in Rust.
 
+### 🖼️ Desktop Preview
+<p align="center">
+  <img src="assets/screenshot1.png" width="49%" alt="Desktop View" />
+  <img src="assets/screenshot2.png" width="49%" alt="Wallpapers Menu" />
+</p>
+
 ---
 
 ## ✨ Features
