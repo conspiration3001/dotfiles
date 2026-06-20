@@ -159,8 +159,8 @@ case "$choice" in
         sleep 0.5
         # Set wallpaper
         ~/.config/hypr/scripts/wallpapers/set.sh ~/.config/wallpapers/noctalia.png &
-        # Launch Noctalia shell
-        noctalia-shell &
+        # Launch Noctalia shell using standard quickshell
+        quickshell -c noctalia-shell &
         # Launch preview terminals
         launch_2x2 "kitty --hold -e fastfetch --logo ~/.config/fastfetch/ascii/matrix.txt --logo-color-1 blue" "kitty --hold -e tty-clock -c -C 4 -b" "kitty --hold -e cmatrix -C blue" "kitty -e cava"
         ;;
