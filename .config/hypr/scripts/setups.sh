@@ -31,6 +31,8 @@ options+="Manga2\0icon\x1f$DIR/manga2.svg\n"
 options+="Fuck\0icon\x1f$DIR/fuck.svg\n"
 options+="Aheago\0icon\x1f$DIR/aheago.svg\n"
 options+="Arch Ultra\0icon\x1f$DIR/arch-ultra.svg\n"
+options+="Noctalia Shell\0icon\x1f$DIR/synthwave.svg\n"
+options+="Default Hyprpanel\0icon\x1f$DIR/arch-ultra.svg\n"
 
 choice=$(echo -e "$options" | rofi -dmenu -i -p "󰕧 Choisir un Setup :" -theme-str "$ROFI_THEME")
 
@@ -150,6 +152,24 @@ case "$choice" in
         ;;
     "Gaming")
         steam & sleep 1; discord & sleep 0.5; spotify-launcher &
+        ;;
+    "Noctalia Shell")
+        # Kill current bars
+        killall hyprpanel waybar quickshell 2>/dev/null
+        sleep 0.5
+        # Set wallpaper
+        ~/.config/hypr/scripts/wallpapers/set.sh ~/.config/wallpapers/noctalia.png &
+        # Launch Noctalia shell
+        noctalia-shell &
+        # Launch preview terminals
+        launch_2x2 "kitty --hold -e fastfetch --logo ~/.config/fastfetch/ascii/matrix.txt --logo-color-1 blue" "kitty --hold -e tty-clock -c -C 4 -b" "kitty --hold -e cmatrix -C blue" "kitty -e cava"
+        ;;
+    "Default Hyprpanel")
+        # Kill Noctalia shell
+        killall noctalia-shell quickshell 2>/dev/null
+        sleep 0.5
+        # Relaunch Hyprpanel
+        hyprpanel &
         ;;
 esac
 
